@@ -35,7 +35,7 @@ fn main() {
 
     // Rust even checks to make sure the correct number of arguments are
     // used.
-    println!("My name is {0}, {1} {0}", "Bond");
+    println!("My name is {0}, {1} {0}", "Bond", "James");
     // FIXME ^ Add the missing argument: "James"
 
     // Only types that implement fmt::Display can be formatted with `{}`. User-
@@ -46,7 +46,7 @@ fn main() {
 
     // This will not compile because `Structure` does not implement
     // fmt::Display
-    println!("This struct `{}` won't print...", Structure(3));
+    // println!("This struct `{}` won't print...", Structure(3));
     // FIXME ^ Comment out this line.
 
     // For Rust 1.58 and above, you can directly capture the argument from
@@ -55,4 +55,7 @@ fn main() {
     let number: f64 = 1.0;
     let width: usize = 6;
     println!("{number:>width$}");
+
+    let pi = 3.141592;
+    println!("{:.3}", pi);
 }
